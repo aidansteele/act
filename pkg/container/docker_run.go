@@ -341,7 +341,7 @@ func (cr *containerReference) copyDir(dstPath string, srcPath string) common.Exe
 			}
 
 			if gitignore != nil && gitignore.Match(file, fi.IsDir()) {
-				return nil
+				return filepath.SkipDir
 			}
 
 			// create a new dir/file header
