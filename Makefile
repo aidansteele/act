@@ -36,3 +36,4 @@ ifneq ($(shell git status -s),)
 endif
 	git tag -a -m "releasing v$(NEW_VERSION)" v$(NEW_VERSION)
 	git push origin v$(NEW_VERSION)
+
